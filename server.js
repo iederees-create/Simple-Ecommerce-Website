@@ -339,7 +339,7 @@ app.post("/api/nowpayments/ipn", (req, res) => {
   }
 });
 
-app.get("*", (_req, res) => {
+app.get("/{*splat}", (_req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
