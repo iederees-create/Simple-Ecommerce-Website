@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d0d0d">
+  <meta name="description" content="Francis Digital Atelier — private digital systems, premium software and bespoke technology commissions.">
+  <title>Francis Digital Atelier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav class="nav shell">
+    <a class="brand" href="#top" aria-label="Francis Digital Atelier home">
+      <span class="brand-mark">F</span>
+      <span>Francis Digital Atelier</span>
+    </a>
+    <div class="nav-links">
+      <a href="#collection">Collection</a>
+      <a href="#commissions">Commissions</a>
+      <a href="#philosophy">Philosophy</a>
+    </div>
+    <a class="nav-cta" href="#commissions">Private enquiry</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="kicker">Private digital systems · Cape Town / Global</p>
+        <h1>Technology, commissioned with restraint.</h1>
+        <p class="hero-text">
+          Software, analytics and digital commerce for people who value clarity, discretion and exceptional execution.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#collection">View the collection</a>
+          <a class="button button-ghost" href="#commissions">Commission a build</a>
+        </div>
+        <div class="trust-row">
+          <span>Private engagements</span>
+          <span>Crypto settlement</span>
+          <span>Global delivery</span>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <p class="panel-index">01 / PRIVATE TECHNOLOGY</p>
+        <div>
+          <p class="quote">“Quiet systems. Serious capability.”</p>
+          <p class="panel-copy">Each product begins with working code. Each service is shaped around the client rather than a template.</p>
+        </div>
+        <div class="panel-meta">
+          <span>Digital systems</span>
+          <span>Data intelligence</span>
+          <span>Commerce</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee-wrap" aria-hidden="true">
+      <div class="marquee">PRIVATE SOFTWARE · EXECUTIVE ANALYTICS · BESPOKE COMMERCE · AI AUTOMATION · DIGITAL SYSTEMS ·</div>
+    </section>
+
+    <section id="collection" class="section shell">
+      <div class="section-head">
+        <div>
+          <p class="kicker">The collection</p>
+          <h2>Digital assets for decisive operators.</h2>
+        </div>
+        <p>Five focused products, selected from my working GitHub projects and refined into commercial assets.</p>
+      </div>
+      <div id="product-grid" class="catalog-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="commissions" class="section section-dark">
+      <div class="shell">
+        <div class="section-head light">
+          <div>
+            <p class="kicker">Private commissions</p>
+            <h2>Built around your operating reality.</h2>
+          </div>
+          <p>Reserve an engagement with crypto. The reservation is credited toward the final project fee after discovery.</p>
+        </div>
+        <div id="service-grid" class="catalog-grid service-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="philosophy" class="section shell philosophy">
+      <p class="kicker">Our standard</p>
+      <div class="philosophy-grid">
+        <h2>Premium does not mean louder. It means considered.</h2>
+        <div class="principles">
+          <article><span>01</span><div><h3>Discretion by default</h3><p>Private client information, secure payment architecture and careful operational boundaries.</p></div></article>
+          <article><span>02</span><div><h3>Designed for confidence</h3><p>Calm interfaces, clear decisions and no unnecessary complexity between you and the outcome.</p></div></article>
+          <article><span>03</span><div><h3>Built to be owned</h3><p>Where applicable, projects are delivered with source, documentation and a clean handover.</p></div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <div>
+      <p class="brand footer-brand"><span class="brand-mark">F</span><span>Francis Digital Atelier</span></p>
+      <p>Private digital products and commissioned technology.</p>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026</span>
+      <span>Crypto payments powered by NOWPayments</span>
+    </div>
+  </footer>
+
+  <dialog id="checkout-dialog" class="checkout-dialog">
+    <button id="close-dialog" class="dialog-close" aria-label="Close checkout">×</button>
+
+    <div id="checkout-form-view">
+      <p class="kicker">Private checkout</p>
+      <h2 id="checkout-title">Complete your purchase</h2>
+      <p id="checkout-subtitle" class="checkout-subtitle"></p>
+
+      <form id="checkout-form">
+        <input type="hidden" id="item-id" name="itemId">
+        <label>
+          <span>Name</span>
+          <input id="customer-name" name="customerName" autocomplete="name" placeholder="Your name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input id="customer-email" name="customerEmail" type="email" autocomplete="email" placeholder="you@domain.com" required>
+        </label>
+        <label>
+          <span>Settlement asset</span>
+          <select id="pay-currency" name="payCurrency" required></select>
+        </label>
+        <div class="checkout-note">
+          Your exact crypto amount and wallet address are generated only after you confirm the order.
+        </div>
+        <button class="button button-primary full" type="submit">Create secure crypto payment</button>
+        <p id="checkout-error" class="error" role="alert"></p>
+      </form>
+    </div>
+
+    <div id="payment-view" class="payment-view" hidden>
+      <p class="kicker">Payment instruction</p>
+      <h2>Complete your transfer</h2>
+      <p class="status-line"><span id="status-dot" class="status-dot"></span><span id="payment-status">Waiting for payment</span></p>
+      <div class="payment-card">
+        <div>
+          <span class="label">Send exactly</span>
+          <strong id="payment-amount"></strong>
+        </div>
+        <div>
+          <span class="label">To this address</span>
+          <div class="copy-line">
+            <code id="payment-address"></code>
+            <button id="copy-address" class="copy-button" type="button">Copy</button>
+          </div>
+        </div>
+        <div>
+          <span class="label">Order</span>
+          <strong id="payment-order"></strong>
+        </div>
+      </div>
+      <p class="payment-help">Keep this window open. We check the payment status automatically. Delivery begins only after NOWPayments reports the payment as finished.</p>
+    </div>
+  </dialog>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
